@@ -4,46 +4,46 @@
 // PRODUCT DATA
 // ========================
 const products = [
-  {id:1,name:'ANTIGRAVITY A1',category:'Drones',price:499,oldPrice:599,rating:4.5,reviews:24,condition:'new',image:'GADGETS/ANTIGRAVITY A1.png',desc:'Professional-grade drone with advanced stabilization and 4K HDR video capture. Perfect for aerial cinematography.'},
-  {id:2,name:'ATEM Mini Extreme ISO',category:'Video Production',price:1425,oldPrice:1599,rating:4.8,reviews:56,condition:'new',image:'GADGETS/ATEM MINI EXTRM ISO.png',desc:'8-channel HDMI live streaming switcher with ISO recording. Broadcast-quality production in a compact form factor.'},
-  {id:3,name:'ATEM Television Studio K8',category:'Video Production',price:2995,oldPrice:3499,rating:4.7,reviews:31,condition:'new',image:'GADGETS/ATEM TELEVISION STUDIO K8.png',desc:'Professional broadcast switcher with 8 inputs, built-in streaming, and advanced chroma keying.'},
-  {id:4,name:'Blimp Suspension Winsfield System',category:'Audio',price:299,oldPrice:349,rating:4.3,reviews:18,condition:'new',image:'GADGETS/BLIMP SESPENSION WINSFIELD SYSTEM.png',desc:'Professional blimp suspension system for crystal-clear audio capture in outdoor environments.'},
-  {id:5,name:'BOYA BY-WS1000',category:'Audio',price:89,oldPrice:109,rating:4.2,reviews:42,condition:'new',image:'GADGETS/BOYA BY-WS1000.png',desc:'Wireless microphone system with exceptional range and clarity for content creators.'},
-  {id:6,name:'Canon EOS G7',category:'Cameras',price:649,oldPrice:749,rating:4.6,reviews:89,condition:'new',image:'GADGETS/CANON EOS G7.png',desc:'Compact system camera with 4K video, fast autofocus, and excellent low-light performance.'},
-  {id:7,name:'Canon EOS Mark III',category:'Cameras',price:2799,oldPrice:3299,rating:4.9,reviews:127,condition:'new',image:'GADGETS/CANON EOS MARK III.png',desc:'Full-frame mirrorless camera with 32MP sensor, 7K video, and professional-grade autofocus.'},
-  {id:8,name:'Canon G7 X',category:'Cameras',price:699,oldPrice:799,rating:4.5,reviews:203,condition:'new',image:'GADGETS/CANON G7 X.png',desc:'Premium compact camera with 1-inch sensor, 4K video, perfect for vlogging and travel.'},
-  {id:9,name:'Canon HD XA25',category:'Cameras',price:1999,oldPrice:2299,rating:4.4,reviews:37,condition:'new',image:'GADGETS/CANON HD XA25.png',desc:'Professional HD camcorder with 20x optical zoom, XLR audio inputs, and broadcast-quality video.'},
-  {id:10,name:'Clapper Board',category:'Accessories',price:29,oldPrice:39,rating:4.1,reviews:65,condition:'new',image:'GADGETS/CLAPPER BOARD.jpeg',desc:'Professional clapperboard for film production. Essential for syncing audio and video in post-production.'},
-  {id:11,name:'CVM-WM300{A}',category:'Audio',price:149,oldPrice:179,rating:4.3,reviews:28,condition:'new',image:'GADGETS/CVM-WM300{A}.png',desc:'Professional wireless microphone system with dual-channel receiver for interviews and presentations.'},
-  {id:12,name:'DJI Lito X1',category:'Drones',price:799,oldPrice:899,rating:4.6,reviews:44,condition:'new',image:'GADGETS/DJI LITO X1.png',desc:'Compact FPV drone with HD transmission and immersive flight experience for creative pilots.'},
-  {id:13,name:'DJI Matrice 4 Series Battery',category:'Drones',price:299,oldPrice:349,rating:4.5,reviews:19,condition:'new',image:'GADGETS/DJI MATRICE 4 SERIES BATTERY.png',desc:'High-capacity intelligent flight battery for DJI Matrice 4 series. Extended flight time for professional operations.'},
-  {id:14,name:'DJI Mavic 4 Pro',category:'Drones',price:2199,oldPrice:2599,rating:4.8,reviews:156,condition:'new',image:'GADGETS/DJI MAVIC 4 PRO.png',desc:'Flagship folding drone with Hasselblad camera, omnidirectional obstacle sensing, and 45-min flight time.'},
-  {id:15,name:'DJI Mic Mini',category:'Audio',price:169,oldPrice:199,rating:4.4,reviews:88,condition:'new',image:'GADGETS/DJI MIC MINI.png',desc:'Ultra-compact wireless microphone system with 48-hour battery life and noise cancellation.'},
-  {id:16,name:'DJI Mini 3',category:'Drones',price:419,oldPrice:549,rating:4.7,reviews:342,condition:'new',image:'GADGETS/DJI MINI 3.png',desc:'Lightweight drone with 4K HDR video, 38-min flight time, and vertical shooting for social media.'},
-  {id:17,name:'DJI Mini 3 (Fly More)',category:'Drones',price:559,oldPrice:719,rating:4.7,reviews:189,condition:'new',image:'GADGETS/DJI MINI 3 (2).png',desc:'DJI Mini 3 Fly More Combo with extra batteries, charging hub, and shoulder bag for extended adventures.'},
-  {id:18,name:'DJI Mini 4K',category:'Drones',price:299,oldPrice:379,rating:4.5,reviews:98,condition:'new',image:'GADGETS/DJI MINI 4K.png',desc:'Entry-level 4K drone with stabilized camera, 31-min flight, and user-friendly features for beginners.'},
-  {id:19,name:'DJI Neo',category:'Drones',price:349,oldPrice:399,rating:4.3,reviews:52,condition:'new',image:'GADGETS/DJI NEO.png',desc:'Compact selfie drone with AI tracking, 4K video, and palm control for effortless content creation.'},
-  {id:20,name:'DJI Osmo Mobile 8P',category:'Gimbals',price:199,oldPrice:249,rating:4.6,reviews:312,condition:'new',image:'GADGETS/DJI OSMO MOBILE 8P.png',desc:'Smartphone gimbal with ActiveTrack 7.0, extended battery life, and built-in extension rod.'},
-  {id:21,name:'DJI RS 5',category:'Gimbals',price:569,oldPrice:719,rating:4.8,reviews:73,condition:'new',image:'GADGETS/DJI RS 5.png',desc:'Professional camera gimbal with 3kg payload, touchscreen tracking, and 14-hour battery life.'},
-  {id:22,name:'F01 Selfie Tripod',category:'Accessories',price:39,oldPrice:49,rating:4.2,reviews:145,condition:'new',image:'GADGETS/F01 SELFIE TRIPOD.png',desc:'Versatile selfie tripod with Bluetooth remote, perfect for vlogging and group photos.'},
-  {id:23,name:'Feelworld 5.5" 4K Monitor',category:'Monitors',price:199,oldPrice:249,rating:4.4,reviews:37,condition:'new',image:"GADGETS/FEELWORLD 5.5'' 4K CAMERA MONITOR.png",desc:'Compact 5.5-inch 4K camera monitor with HDMI input, peaking, and false color for precise focus.'},
-  {id:24,name:'Feelworld F7 Plus',category:'Monitors',price:299,oldPrice:359,rating:4.5,reviews:41,condition:'new',image:'GADGETS/FEELWORLD F7 PLUS.png',desc:'7-inch Full HD camera monitor with 3D LUT support, waveform, and professional monitoring tools.'},
-  {id:25,name:'Feelworld Teleprompter TP10',category:'Accessories',price:399,oldPrice:499,rating:4.3,reviews:22,condition:'new',image:'GADGETS/FEELWORLD TELEPROMPTER TP10 .png',desc:'Professional 10-inch teleprompter with beam-splitter glass, ideal for on-camera presentations.'},
-  {id:26,name:'GFM Dolly',category:'Accessories',price:149,oldPrice:189,rating:4.1,reviews:15,condition:'new',image:'GADGETS/GFM DOLLY.png',desc:'Professional camera dolly for smooth tracking shots. Compatible with most tripod systems.'},
-  {id:27,name:'Godox AD600BM',category:'Lighting',price:549,oldPrice:649,rating:4.6,reviews:67,condition:'new',image:'GADGETS/GODOX AD600BM.png',desc:'600Ws all-in-one outdoor flash with lithium battery, 500 full-power flashes, and HSS support.'},
-  {id:28,name:'Godox Litemons',category:'Lighting',price:299,oldPrice:369,rating:4.4,reviews:33,condition:'new',image:'GADGETS/GODOX LITEMONS.png',desc:'Versatile LED lighting system with app control, RGB capability, and high CRI for accurate colors.'},
-  {id:29,name:'Gostream Duet',category:'Video Production',price:699,oldPrice:849,rating:4.5,reviews:29,condition:'new',image:'GADGETS/GOSTREAM DUET.png',desc:'Portable live streaming encoder with dual HDMI inputs for multi-camera productions.'},
-  {id:30,name:'Gostream Duet ISO',category:'Video Production',price:899,oldPrice:1049,rating:4.6,reviews:17,condition:'new',image:'GADGETS/GOSTREAM DUET ISO.png',desc:'Advanced live streaming encoder with ISO recording and multi-track audio support.'},
-  {id:31,name:'Insta360 X4',category:'Cameras',price:424,oldPrice:499,rating:4.7,reviews:289,condition:'new',image:'GADGETS/INSTA 360 X4.png',desc:'8K 360-degree action camera with FlowState stabilization, 72MP photos, and waterproof design.'},
-  {id:32,name:'Osmo Pocket 4',category:'Cameras',price:499,oldPrice:599,rating:4.8,reviews:167,condition:'new',image:'GADGETS/OSMO POCKET 4.png',desc:'3-axis stabilized pocket camera with 1-inch sensor, 4K/120fps, and AI tracking capabilities.'},
-  {id:33,name:'Panasonic AVCCAM',category:'Cameras',price:1799,oldPrice:2099,rating:4.3,reviews:24,condition:'new',image:'GADGETS/PANASONIC AVCCAM.png',desc:'Professional AVCHD camcorder with 3MOS sensors, 20x zoom, and broadcast-quality recording.'},
-  {id:34,name:'RF 24-240mm F4-6.3 IS USM',category:'Lenses',price:599,oldPrice:749,rating:4.5,reviews:78,condition:'new',image:'GADGETS/RF 24-240MM F4-6.3 IS UMS.png',desc:'All-in-one zoom lens with 10x range, image stabilization, and fast USM autofocus for Canon RF mount.'},
-  {id:35,name:'RO6 Drone',category:'Drones',price:899,oldPrice:1099,rating:4.4,reviews:31,condition:'new',image:'GADGETS/RO6 DRONE.png',desc:'Professional 6-rotor drone with heavy lift capacity, GPS positioning, and 4K camera payload.'},
-  {id:36,name:'Roland V-80HDD',category:'Video Production',price:2995,oldPrice:3499,rating:4.7,reviews:14,condition:'new',image:'GADGETS/ROLAND V-80HDD.png',desc:'Professional video switcher with 8 inputs, multi-view, and seamless switching for live events.'},
-  {id:37,name:'Seekcom S1',category:'Audio',price:59,oldPrice:79,rating:4.1,reviews:93,condition:'new',image:'GADGETS/SEEKCOM S1.png',desc:'Compact conference speakerphone with 360-degree audio pickup. Ideal for hybrid meetings and content creation.'},
-  {id:38,name:'Sony HXR-NX70C',category:'Cameras',price:2499,oldPrice:2999,rating:4.5,reviews:44,condition:'new',image:'GADGETS/SONY HXR-NX70C.png',desc:'Professional dust and rain-proof NXCAM camcorder with 96GB internal memory and 26.3mm wide-angle lens.'},
-  {id:39,name:'Sprolink Neolive N5',category:'Video Production',price:1499,oldPrice:1799,rating:4.6,reviews:21,condition:'new',image:'GADGETS/SPROLINK NEOLIVE N5.png',desc:'All-in-one live production encoder with 4 HDMI inputs, streaming, recording, and touchscreen control.'},
-  {id:40,name:'Boya BY-WS1000 Used',category:'Audio',price:59,oldPrice:89,rating:4.0,reviews:12,condition:'used',image:'GADGETS/BOYA BY-WS1000.png',desc:'Pre-owned wireless microphone system in excellent condition. Fully tested and backed by warranty.'}
+  {id:1,name:'ANTIGRAVITY A1',category:'Drones',price:800000,oldPrice:960000,rating:4.5,reviews:24,condition:'new',image:'GADGETS/ANTIGRAVITY A1.png',desc:'Professional-grade drone with advanced stabilization and 4K HDR video capture. Perfect for aerial cinematography.'},
+  {id:2,name:'ATEM Mini Extreme ISO',category:'Video Production',price:2280000,oldPrice:2560000,rating:4.8,reviews:56,condition:'new',image:'GADGETS/ATEM MINI EXTRM ISO.png',desc:'8-channel HDMI live streaming switcher with ISO recording. Broadcast-quality production in a compact form factor.'},
+  {id:3,name:'ATEM Television Studio K8',category:'Video Production',price:4790000,oldPrice:5600000,rating:4.7,reviews:31,condition:'new',image:'GADGETS/ATEM TELEVISION STUDIO K8.png',desc:'Professional broadcast switcher with 8 inputs, built-in streaming, and advanced chroma keying.'},
+  {id:4,name:'Blimp Suspension Winsfield System',category:'Audio',price:480000,oldPrice:560000,rating:4.3,reviews:18,condition:'new',image:'GADGETS/BLIMP SESPENSION WINSFIELD SYSTEM.png',desc:'Professional blimp suspension system for crystal-clear audio capture in outdoor environments.'},
+  {id:5,name:'BOYA BY-WS1000',category:'Audio',price:140000,oldPrice:175000,rating:4.2,reviews:42,condition:'new',image:'GADGETS/BOYA BY-WS1000.png',desc:'Wireless microphone system with exceptional range and clarity for content creators.'},
+  {id:6,name:'Canon EOS G7',category:'Cameras',price:1040000,oldPrice:1200000,rating:4.6,reviews:89,condition:'new',image:'GADGETS/CANON EOS G7.png',desc:'Compact system camera with 4K video, fast autofocus, and excellent low-light performance.'},
+  {id:7,name:'Canon EOS Mark III',category:'Cameras',price:4480000,oldPrice:5280000,rating:4.9,reviews:127,condition:'new',image:'GADGETS/CANON EOS MARK III.png',desc:'Full-frame mirrorless camera with 32MP sensor, 7K video, and professional-grade autofocus.'},
+  {id:8,name:'Canon G7 X',category:'Cameras',price:1120000,oldPrice:1280000,rating:4.5,reviews:203,condition:'new',image:'GADGETS/CANON G7 X.png',desc:'Premium compact camera with 1-inch sensor, 4K video, perfect for vlogging and travel.'},
+  {id:9,name:'Canon HD XA25',category:'Cameras',price:3200000,oldPrice:3680000,rating:4.4,reviews:37,condition:'new',image:'GADGETS/CANON HD XA25.png',desc:'Professional HD camcorder with 20x optical zoom, XLR audio inputs, and broadcast-quality video.'},
+  {id:10,name:'Clapper Board',category:'Accessories',price:46000,oldPrice:62000,rating:4.1,reviews:65,condition:'new',image:'GADGETS/CLAPPER BOARD.jpeg',desc:'Professional clapperboard for film production. Essential for syncing audio and video in post-production.'},
+  {id:11,name:'CVM-WM300{A}',category:'Audio',price:240000,oldPrice:290000,rating:4.3,reviews:28,condition:'new',image:'GADGETS/CVM-WM300{A}.png',desc:'Professional wireless microphone system with dual-channel receiver for interviews and presentations.'},
+  {id:12,name:'DJI Lito X1',category:'Drones',price:1280000,oldPrice:1440000,rating:4.6,reviews:44,condition:'new',image:'GADGETS/DJI LITO X1.png',desc:'Compact FPV drone with HD transmission and immersive flight experience for creative pilots.'},
+  {id:13,name:'DJI Matrice 4 Series Battery',category:'Drones',price:480000,oldPrice:560000,rating:4.5,reviews:19,condition:'new',image:'GADGETS/DJI MATRICE 4 SERIES BATTERY.png',desc:'High-capacity intelligent flight battery for DJI Matrice 4 series. Extended flight time for professional operations.'},
+  {id:14,name:'DJI Mavic 4 Pro',category:'Drones',price:3520000,oldPrice:4160000,rating:4.8,reviews:156,condition:'new',image:'GADGETS/DJI MAVIC 4 PRO.png',desc:'Flagship folding drone with Hasselblad camera, omnidirectional obstacle sensing, and 45-min flight time.'},
+  {id:15,name:'DJI Mic Mini',category:'Audio',price:270000,oldPrice:320000,rating:4.4,reviews:88,condition:'new',image:'GADGETS/DJI MIC MINI.png',desc:'Ultra-compact wireless microphone system with 48-hour battery life and noise cancellation.'},
+  {id:16,name:'DJI Mini 3',category:'Drones',price:670000,oldPrice:880000,rating:4.7,reviews:342,condition:'new',image:'GADGETS/DJI MINI 3.png',desc:'Lightweight drone with 4K HDR video, 38-min flight time, and vertical shooting for social media.'},
+  {id:17,name:'DJI Mini 3 (Fly More)',category:'Drones',price:895000,oldPrice:1150000,rating:4.7,reviews:189,condition:'new',image:'GADGETS/DJI MINI 3 (2).png',desc:'DJI Mini 3 Fly More Combo with extra batteries, charging hub, and shoulder bag for extended adventures.'},
+  {id:18,name:'DJI Mini 4K',category:'Drones',price:480000,oldPrice:610000,rating:4.5,reviews:98,condition:'new',image:'GADGETS/DJI MINI 4K.png',desc:'Entry-level 4K drone with stabilized camera, 31-min flight, and user-friendly features for beginners.'},
+  {id:19,name:'DJI Neo',category:'Drones',price:560000,oldPrice:640000,rating:4.3,reviews:52,condition:'new',image:'GADGETS/DJI NEO.png',desc:'Compact selfie drone with AI tracking, 4K video, and palm control for effortless content creation.'},
+  {id:20,name:'DJI Osmo Mobile 8P',category:'Gimbals',price:320000,oldPrice:400000,rating:4.6,reviews:312,condition:'new',image:'GADGETS/DJI OSMO MOBILE 8P.png',desc:'Smartphone gimbal with ActiveTrack 7.0, extended battery life, and built-in extension rod.'},
+  {id:21,name:'DJI RS 5',category:'Gimbals',price:910000,oldPrice:1150000,rating:4.8,reviews:73,condition:'new',image:'GADGETS/DJI RS 5.png',desc:'Professional camera gimbal with 3kg payload, touchscreen tracking, and 14-hour battery life.'},
+  {id:22,name:'F01 Selfie Tripod',category:'Accessories',price:62000,oldPrice:78000,rating:4.2,reviews:145,condition:'new',image:'GADGETS/F01 SELFIE TRIPOD.png',desc:'Versatile selfie tripod with Bluetooth remote, perfect for vlogging and group photos.'},
+  {id:23,name:'Feelworld 5.5" 4K Monitor',category:'Monitors',price:320000,oldPrice:400000,rating:4.4,reviews:37,condition:'new',image:"GADGETS/FEELWORLD 5.5'' 4K CAMERA MONITOR.png",desc:'Compact 5.5-inch 4K camera monitor with HDMI input, peaking, and false color for precise focus.'},
+  {id:24,name:'Feelworld F7 Plus',category:'Monitors',price:480000,oldPrice:575000,rating:4.5,reviews:41,condition:'new',image:'GADGETS/FEELWORLD F7 PLUS.png',desc:'7-inch Full HD camera monitor with 3D LUT support, waveform, and professional monitoring tools.'},
+  {id:25,name:'Feelworld Teleprompter TP10',category:'Accessories',price:640000,oldPrice:800000,rating:4.3,reviews:22,condition:'new',image:'GADGETS/FEELWORLD TELEPROMPTER TP10 .png',desc:'Professional 10-inch teleprompter with beam-splitter glass, ideal for on-camera presentations.'},
+  {id:26,name:'GFM Dolly',category:'Accessories',price:240000,oldPrice:300000,rating:4.1,reviews:15,condition:'new',image:'GADGETS/GFM DOLLY.png',desc:'Professional camera dolly for smooth tracking shots. Compatible with most tripod systems.'},
+  {id:27,name:'Godox AD600BM',category:'Lighting',price:850000,oldPrice:1040000,rating:4.6,reviews:67,condition:'new',image:'GADGETS/GODOX AD600BM.png',desc:'600Ws all-in-one outdoor flash with lithium battery, 500 full-power flashes, and HSS support.'},
+  {id:28,name:'Godox Litemons',category:'Lighting',price:480000,oldPrice:590000,rating:4.4,reviews:33,condition:'new',image:'GADGETS/GODOX LITEMONS.png',desc:'Versatile LED lighting system with app control, RGB capability, and high CRI for accurate colors.'},
+  {id:29,name:'Gostream Duet',category:'Video Production',price:1120000,oldPrice:1360000,rating:4.5,reviews:29,condition:'new',image:'GADGETS/GOSTREAM DUET.png',desc:'Portable live streaming encoder with dual HDMI inputs for multi-camera productions.'},
+  {id:30,name:'Gostream Duet ISO',category:'Video Production',price:1440000,oldPrice:1680000,rating:4.6,reviews:17,condition:'new',image:'GADGETS/GOSTREAM DUET ISO.png',desc:'Advanced live streaming encoder with ISO recording and multi-track audio support.'},
+  {id:31,name:'Insta360 X4',category:'Cameras',price:680000,oldPrice:800000,rating:4.7,reviews:289,condition:'new',image:'GADGETS/INSTA 360 X4.png',desc:'8K 360-degree action camera with FlowState stabilization, 72MP photos, and waterproof design.'},
+  {id:32,name:'Osmo Pocket 4',category:'Cameras',price:800000,oldPrice:960000,rating:4.8,reviews:167,condition:'new',image:'GADGETS/OSMO POCKET 4.png',desc:'3-axis stabilized pocket camera with 1-inch sensor, 4K/120fps, and AI tracking capabilities.'},
+  {id:33,name:'Panasonic AVCCAM',category:'Cameras',price:2880000,oldPrice:3360000,rating:4.3,reviews:24,condition:'new',image:'GADGETS/PANASONIC AVCCAM.png',desc:'Professional AVCHD camcorder with 3MOS sensors, 20x zoom, and broadcast-quality recording.'},
+  {id:34,name:'RF 24-240mm F4-6.3 IS USM',category:'Lenses',price:960000,oldPrice:1200000,rating:4.5,reviews:78,condition:'new',image:'GADGETS/RF 24-240MM F4-6.3 IS UMS.png',desc:'All-in-one zoom lens with 10x range, image stabilization, and fast USM autofocus for Canon RF mount.'},
+  {id:35,name:'RO6 Drone',category:'Drones',price:1440000,oldPrice:1760000,rating:4.4,reviews:31,condition:'new',image:'GADGETS/RO6 DRONE.png',desc:'Professional 6-rotor drone with heavy lift capacity, GPS positioning, and 4K camera payload.'},
+  {id:36,name:'Roland V-80HDD',category:'Video Production',price:4790000,oldPrice:5600000,rating:4.7,reviews:14,condition:'new',image:'GADGETS/ROLAND V-80HDD.png',desc:'Professional video switcher with 8 inputs, multi-view, and seamless switching for live events.'},
+  {id:37,name:'Seekcom S1',category:'Audio',price:94000,oldPrice:126000,rating:4.1,reviews:93,condition:'new',image:'GADGETS/SEEKCOM S1.png',desc:'Compact conference speakerphone with 360-degree audio pickup. Ideal for hybrid meetings and content creation.'},
+  {id:38,name:'Sony HXR-NX70C',category:'Cameras',price:4000000,oldPrice:4800000,rating:4.5,reviews:44,condition:'new',image:'GADGETS/SONY HXR-NX70C.png',desc:'Professional dust and rain-proof NXCAM camcorder with 96GB internal memory and 26.3mm wide-angle lens.'},
+  {id:39,name:'Sprolink Neolive N5',category:'Video Production',price:2400000,oldPrice:2880000,rating:4.6,reviews:21,condition:'new',image:'GADGETS/SPROLINK NEOLIVE N5.png',desc:'All-in-one live production encoder with 4 HDMI inputs, streaming, recording, and touchscreen control.'},
+  {id:40,name:'Boya BY-WS1000 Used',category:'Audio',price:94000,oldPrice:140000,rating:4.0,reviews:12,condition:'used',image:'GADGETS/BOYA BY-WS1000.png',desc:'Pre-owned wireless microphone system in excellent condition. Fully tested and backed by warranty.'}
 ];
 
 // ========================
@@ -178,7 +178,7 @@ function renderCartSidebar() {
   if (!container) return;
   if (!state.cart.length) {
     html(container, `<div class="cart-empty"><div class="icon">🛒</div><p>${t('cartEmpty')}</p></div>`);
-    $('.cart-total span:last-child').textContent = '$0';
+    $('.cart-total span:last-child').textContent = '₦0';
     return;
   }
   html(container, state.cart.map(item => `
@@ -186,7 +186,7 @@ function renderCartSidebar() {
       <img src="${item.image}" alt="${item.name}" onerror="this.src='DRONE.png'">
       <div class="item-info">
         <div class="item-name">${item.name}</div>
-        <div class="item-price">$${item.price.toLocaleString()}</div>
+        <div class="item-price">₦${item.price.toLocaleString()}</div>
         <div class="item-qty">
           <button onclick="updateQty(${item.id},-1)">−</button>
           <span>${item.qty}</span>
@@ -195,7 +195,7 @@ function renderCartSidebar() {
       </div>
     </div>
   `).join(''));
-  $('.cart-total span:last-child').textContent = `$${cartTotal().toLocaleString()}`;
+  $('.cart-total span:last-child').textContent = `₦${cartTotal().toLocaleString()}`;
 }
 
 // ========================
@@ -240,7 +240,7 @@ function renderWishlistPage() {
       <div class="info">
         <div class="category-label">${p.category}</div>
         <h3>${p.name}</h3>
-        <div class="price"><span class="price-current">$${p.price.toLocaleString()}</span>${p.oldPrice ? `<span class="price-old">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
+        <div class="price"><span class="price-current">₦${p.price.toLocaleString()}</span>${p.oldPrice ? `<span class="price-old">₦${p.oldPrice.toLocaleString()}</span>` : ''}</div>
         <div class="rating"><span class="stars">${'★'.repeat(Math.floor(p.rating))}${p.rating % 1 >= 0.5 ? '½' : ''}</span> (${p.reviews})</div>
         <button class="add-to-cart" onclick="addToCart(${p.id})">${t('addToCart')}</button>
       </div>
@@ -291,7 +291,7 @@ function openCompareModal() {
           ${items.map(p => `<td style="padding:12px;border:1px solid var(--border);text-align:center"><img src="${p.image}" style="height:80px;object-fit:contain" onerror="this.src='DRONE.png'"><br><strong>${p.name}</strong></td>`).join('')}
         </tr>
         <tr><td style="padding:12px;border:1px solid var(--border);font-weight:600">Price</td>
-          ${items.map(p => `<td style="padding:12px;border:1px solid var(--border);text-align:center;color:var(--accent);font-weight:700">$${p.price.toLocaleString()}</td>`).join('')}
+          ${items.map(p => `<td style="padding:12px;border:1px solid var(--border);text-align:center;color:var(--accent);font-weight:700">₦${p.price.toLocaleString()}</td>`).join('')}
         </tr>
         <tr><td style="padding:12px;border:1px solid var(--border);font-weight:600">Category</td>
           ${items.map(p => `<td style="padding:12px;border:1px solid var(--border);text-align:center">${p.category}</td>`).join('')}
@@ -327,10 +327,30 @@ function renderFeatured() {
   html(grid, featured.map(p => productCardHTML(p)).join(''));
 }
 
+const brandIcons = {
+  'Canon': '📷', 'DJI': '🛸', 'Godox': '💡', 'Sony': '📹', 'Panasonic': '🎥',
+  'Boya': '🎙️', 'Roland': '🎛️', 'Feelworld': '🖥️', 'Blackmagic': '🎬',
+  'Insta360': '🔵', 'Sprolink': '📡', 'Gostream': '📺', 'Seekcom': '📞',
+  'Antigravity': '⚡', 'RØDE': '🎤', 'GFM': '🎥'
+};
+
+function detectBrand(name) {
+  const upper = name.toUpperCase();
+  for (const [b, icon] of Object.entries(brandIcons)) {
+    if (upper.startsWith(b.toUpperCase())) return { name: b, icon };
+  }
+  if (upper.includes('ATEM')) return { name: 'Blackmagic', icon: '🎬' };
+  if (upper.includes('OSMO') || upper.includes('POCKET')) return { name: 'DJI', icon: '🛸' };
+  if (upper.includes('RF ')) return { name: 'Canon', icon: '📷' };
+  if (upper.startsWith('CVM')) return { name: 'Boya', icon: '🎙️' };
+  return null;
+}
+
 function productCardHTML(p) {
   const inWish = isWishlisted(p.id);
   const inComp = state.compare.includes(p.id);
   const sale = p.oldPrice > p.price;
+  const brand = detectBrand(p.name);
   return `
   <div class="product-card" data-id="${p.id}">
     <div class="image-wrap">
@@ -345,10 +365,11 @@ function productCardHTML(p) {
     <div class="info">
       <div class="category-label">${p.category}</div>
       <h3>${p.name}</h3>
+      ${brand ? `<div class="brand-tag">${brand.icon} ${brand.name}</div>` : ''}
       <div class="price">
-        <span class="price-current">$${p.price.toLocaleString()}</span>
-        ${p.oldPrice ? `<span class="price-old">$${p.oldPrice.toLocaleString()}</span>` : ''}
-        ${p.condition === 'used' ? `<span class="price-match">Used - Save $${(p.oldPrice - p.price).toLocaleString()}</span>` : ''}
+        <span class="price-current">₦${p.price.toLocaleString()}</span>
+        ${p.oldPrice ? `<span class="price-old">₦${p.oldPrice.toLocaleString()}</span>` : ''}
+        ${p.condition === 'used' ? `<span class="price-match">Used - Save ₦${(p.oldPrice - p.price).toLocaleString()}</span>` : ''}
       </div>
       <div class="rating"><span class="stars">${'★'.repeat(Math.floor(p.rating))}${p.rating % 1 >= 0.5 ? '½' : ''}</span> (${p.reviews} ${t('reviews').toLowerCase()})</div>
       <div class="installment-info"><span class="icon">📋</span> ${t('installmentInfo')}</div>
@@ -396,7 +417,7 @@ function quickView(id) {
       <div class="quick-view-info">
         <div class="category-name">${p.category}</div>
         <h2 class="title">${p.name}</h2>
-        <div class="price-display">$${p.price.toLocaleString()} ${p.oldPrice ? `<span style="font-size:18px;color:var(--text-muted);text-decoration:line-through;font-weight:400">$${p.oldPrice.toLocaleString()}</span>` : ''}</div>
+        <div class="price-display">₦${p.price.toLocaleString()} ${p.oldPrice ? `<span style="font-size:18px;color:var(--text-muted);text-decoration:line-through;font-weight:400">₦${p.oldPrice.toLocaleString()}</span>` : ''}</div>
         <div class="rating" style="margin-bottom:16px"><span class="stars">${'★'.repeat(Math.floor(p.rating))}</span> ${p.rating} (${p.reviews} ${t('reviews').toLowerCase()})</div>
         <div class="description">${p.desc}</div>
         <div class="installment-info" style="margin-bottom:16px"><span class="icon">📋</span> ${t('installmentInfo')}</div>

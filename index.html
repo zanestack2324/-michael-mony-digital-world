@@ -112,6 +112,9 @@
     <div class="hero-music" id="hero-music-toggle" onclick="toggleBgMusic()" title="Background Music">
       <i class="fa-solid fa-music"></i>
     </div>
+    <a class="hero-whatsapp" href="https://wa.me/2348022152085" target="_blank" rel="noopener" aria-label="WhatsApp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <div class="hero-scroll" onclick="window.scrollTo({top:window.innerHeight,behavior:'smooth'})">
     <i class="fa-solid fa-chevron-down"></i>
   </div>
@@ -775,7 +778,7 @@
     <div class="cart-empty"><div class="icon">🛒</div><p>Your cart is empty</p></div>
   </div>
   <div class="cart-footer">
-    <div class="cart-total"><span>Total</span><span>$0</span></div>
+    <div class="cart-total"><span>Total</span><span>₦0</span></div>
     <button class="cart-checkout" onclick="openCheckout()">Checkout <i class="fa-solid fa-arrow-right"></i></button>
   </div>
 </div>
@@ -810,7 +813,6 @@
 <!-- WHATSAPP CTA -->
 <a class="whatsapp-cta" href="https://wa.me/2348022152085" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
-  <span>Chat with Us</span>
 </a>
 
 <!-- LIVE CHAT -->
@@ -850,7 +852,7 @@
           <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
           <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
@@ -1126,7 +1128,7 @@ document.addEventListener('DOMContentLoaded', function() {
           '<span class="order-status">' + sanitize(o.status || 'Confirmed') + '</span>' +
         '</div>' +
         '<div class="order-items">' + sanitize(items) + '</div>' +
-        '<div class="order-total">$' + (o.total || 0).toLocaleString() + '</div>' +
+        '<div class="order-total">₦' + (o.total || 0).toLocaleString() + '</div>' +
         '<div class="order-track">' +
           '<strong>Delivery:</strong> ' + sanitize(o.shipping?.address || '') + ' | ' +
           '<strong>Est:</strong> ' + sanitize(o.estimatedDelivery || '3-5 business days') +
@@ -1220,14 +1222,14 @@ document.addEventListener('DOMContentLoaded', function() {
     checkoutData.step = 3;
     var cart = (window.state && window.state.cart) || [];
     var subtotal = cart.reduce(function(sum, item) { return sum + item.price * item.qty; }, 0);
-    var shipping = subtotal > 500 ? 0 : 25;
+    var shipping = subtotal > 800000 ? 0 : 40000;
     var total = subtotal + shipping;
 
     var itemsHtml = cart.map(function(item) {
       return '<div class="checkout-summary-item">' +
         '<span class="item-name">' + sanitize(item.name) + '</span>' +
         '<span class="item-qty">x' + item.qty + '</span>' +
-        '<span class="item-price">$' + (item.price * item.qty).toLocaleString() + '</span>' +
+        '<span class="item-price">₦' + (item.price * item.qty).toLocaleString() + '</span>' +
       '</div>';
     }).join('');
 
@@ -1239,16 +1241,16 @@ document.addEventListener('DOMContentLoaded', function() {
           itemsHtml +
           '<div class="checkout-summary-item">' +
             '<span class="item-name">Shipping</span>' +
-            '<span class="item-price">' + (shipping === 0 ? 'FREE' : '$' + shipping) + '</span>' +
+            '<span class="item-price">' + (shipping === 0 ? 'FREE' : '₦' + shipping.toLocaleString()) + '</span>' +
           '</div>' +
         '</div>' +
-        '<div class="checkout-total-row"><span>Total</span><span>$' + total.toLocaleString() + '</span></div>' +
+        '<div class="checkout-total-row"><span>Total</span><span>₦' + total.toLocaleString() + '</span></div>' +
         '<div style="margin-top:16px;padding:12px;background:rgba(201,169,97,.08);font-size:12px;color:var(--brass)">' +
           '📋 Insured delivery &bull; Warranty included &bull; Installment available' +
         '</div>' +
         '<div class="checkout-actions">' +
           '<button class="btn btn-outline" onclick="renderCheckoutStep1()">Back</button>' +
-          '<button class="btn btn-primary" onclick="confirmOrder()">Confirm & Pay $' + total.toLocaleString() + '</button>' +
+          '<button class="btn btn-primary" onclick="confirmOrder()">Confirm & Pay ₦' + total.toLocaleString() + '</button>' +
         '</div>' +
       '</div>';
   }
@@ -1258,7 +1260,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!cart.length) { showToast('Cart is empty', 'error'); return; }
 
     var subtotal = cart.reduce(function(sum, item) { return sum + item.price * item.qty; }, 0);
-    var shipping = subtotal > 500 ? 0 : 25;
+    var shipping = subtotal > 800000 ? 0 : 40000;
     var total = subtotal + shipping;
 
     var order = {
@@ -1291,7 +1293,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '<div class="order-confirm-details">' +
           'We\'ve sent a confirmation to <strong>' + sanitize(checkoutData.shipping.email) + '</strong>.<br>' +
           'Estimated delivery: <strong>' + order.estimatedDelivery + '</strong><br>' +
-          'Total charged: <strong>$' + total.toLocaleString() + '</strong><br><br>' +
+          'Total charged: <strong>₦' + total.toLocaleString() + '</strong><br><br>' +
           '📦 Your order is fully insured and tracked.' +
         '</div>' +
         '<button class="btn btn-primary" onclick="closeCheckout(); navigate(\'orders\');">View My Orders</button>' +
