@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://michael-mony-digital-world-chi.vercel.app/sitemap.xml
+
